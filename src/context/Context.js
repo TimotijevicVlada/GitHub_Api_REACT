@@ -3,8 +3,11 @@ import Reducer from "./Reducer";
 
 const INITIAL_STATE = {
     user: [],
-    isFetching: false,
-    error: false,
+    userRepos: [],
+    userIsFetching: false,
+    reposIsFetching: false,
+    userError: false,
+    reposError: false
 };
 
 export const UserContext = createContext(INITIAL_STATE);

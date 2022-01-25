@@ -11,7 +11,7 @@ const User = () => {
         dispatch({ type: "FETCH_USER" });
 
         const headers = {
-            "Authorization": `token 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`
+            "Authorization": `token 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`
         }
         try {
             const response = await axios.get("https://api.github.com/user", {
@@ -19,10 +19,10 @@ const User = () => {
             });
             console.log(response.data);
 
-            dispatch({ type: "FETCH_SUCCESS", payload: response.data });
+            dispatch({ type: "FETCH_USER_SUCCESS", payload: response.data });
         } catch (err) {
             console.log(err);
-            dispatch({ type: "FETCH_FAILURE" });
+            dispatch({ type: "FETCH_USER_FAILURE" });
         }
     };
 
