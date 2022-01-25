@@ -45,4 +45,43 @@
 .App .navbar .navbar_menu .link:hover {
   text-decoration: underline;
 }
+
+.App .home {
+  padding: 50px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.App .home .user {
+  border: 2px solid #575757;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.App .home .user img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.App .home .user .name {
+  margin-top: 20px;
+}
+
+.App .home .user .bio {
+  margin: 20px 0px;
+}
+
+.App .home .user .follow i {
+  margin-right: 10px;
+}
+
+.App .home .user .location i {
+  margin-right: 10px;
+}
+
+.App .home .repos {
+  margin-left: 100px;
+}
 /*# sourceMappingURL=App.css.map */
