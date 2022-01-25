@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
-import './App.css';
+import './style/App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Search from "./components/Search";
 import axios from 'axios';
 
 function App() {
@@ -7,13 +11,12 @@ function App() {
   const [data, setData] = useState([]);
 
   const getData = async () => {
-
     const headers = {
-      "Authorization": `token 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`
+      "Authorization": `token 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`
     }
     try {
       const response = await axios.get(" https://api.github.com/user", {
-        "headers": headers
+        headers: headers
       });
       console.log(response);
       setData(response.data)
@@ -28,9 +31,16 @@ function App() {
 
 
   return (
-    <div className="App">
-      <img src={data.avatar_url} />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+            <Route path="/" element={<Home />}/>
+            <Route path="/search" element={<Search />}/>
+        </Routes>
+      </div>
+    </Router>
+
   );
 }
 

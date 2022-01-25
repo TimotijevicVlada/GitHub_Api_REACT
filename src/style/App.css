@@ -1,0 +1,47 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+
+.App {
+  background-color: #181818;
+  min-height: 100vh;
+  color: white;
+}
+
+.App .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #292929;
+  padding: 10px 0px;
+}
+
+.App .navbar .logo {
+  font-size: 22px;
+}
+
+.App .navbar .logo i {
+  margin-right: 10px;
+}
+
+.App .navbar .navbar_menu .link {
+  color: inherit;
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.App .navbar .navbar_menu .link:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=App.css.map */
