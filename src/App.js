@@ -12,11 +12,11 @@ function App() {
 
   const getData = async () => {
     const headers = {
-      "Authorization": `token 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`
+      "Authorization": `token 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`
     }
     try {
       const response = await axios.get(" https://api.github.com/user", {
-        headers: headers
+        "headers": headers
       });
       console.log(response);
       setData(response.data)

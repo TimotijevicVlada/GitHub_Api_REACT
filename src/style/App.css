@@ -23,7 +23,7 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   background-color: #292929;
-  padding: 10px 0px;
+  padding: 8px 0px;
 }
 
 .App .navbar .logo {
@@ -32,6 +32,7 @@
 
 .App .navbar .logo i {
   margin-right: 10px;
+  font-size: 30px;
 }
 
 .App .navbar .navbar_menu .link {
