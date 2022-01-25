@@ -51,11 +51,15 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .App .home .user {
   border: 2px solid #575757;
   width: 400px;
+  height: 90vh;
   padding: 20px;
   border-radius: 10px;
 }
@@ -83,5 +87,24 @@
 
 .App .home .repos {
   margin-left: 100px;
+}
+
+.App .home .repos .repo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #575757;
+  margin-bottom: 10px;
+  width: 800px;
+  border-radius: 7px;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.App .home .repos .repo .index {
+  margin-right: 30px;
 }
 /*# sourceMappingURL=App.css.map */

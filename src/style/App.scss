@@ -37,9 +37,11 @@
   .home {
     padding: 50px 100px;
     display: flex;
+    justify-content: center;
     .user {
       border: 2px solid rgb(87, 87, 87);
       width: 400px;
+      height: 90vh;
       padding: 20px;
       border-radius: 10px;
       img {
@@ -65,6 +67,19 @@
     }
     .repos {
         margin-left: 100px;
+        .repo {
+            display: flex;
+            align-items: center;
+            border: 2px solid rgb(87, 87, 87);
+            margin-bottom: 10px;
+            width: 800px;
+            border-radius: 7px;
+            padding: 5px 20px;
+            cursor: pointer;
+            .index {
+                margin-right: 30px;
+            }
+        }
     }
   }
 }

@@ -17,12 +17,16 @@ export const ContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(Reducer, INITIAL_STATE);
 
 
+
     return (
         <UserContext.Provider
             value={{
                 user: state.user,
                 isFetching: state.isFetching,
                 error: state.error,
+                userRepos: state.userRepos,
+                reposIsFetching: state.reposIsFetching,
+                reposError: state.reposError,
                 dispatch
             }}
         >

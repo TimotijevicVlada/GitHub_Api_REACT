@@ -6,17 +6,16 @@ const User = () => {
 
     const { dispatch, user } = useContext(UserContext);
 
+    console.log(user);
 
     const getUser = async () => {
         dispatch({ type: "FETCH_USER" });
 
-        const headers = {
-            "Authorization": `token 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`
-        }
+        // const headers = {
+        //     "Authorization": `token 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`
+        // }
         try {
-            const response = await axios.get("https://api.github.com/user", {
-                "headers": headers
-            });
+            const response = await axios.get("https://api.github.com/users/TimotijevicVlada");
             console.log(response.data);
 
             dispatch({ type: "FETCH_USER_SUCCESS", payload: response.data });
