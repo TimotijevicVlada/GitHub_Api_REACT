@@ -15,7 +15,7 @@ export const FetchReposFailure = () => ({
 
 export const fetchRepos = () => {
 
-    return async (dispatch, getState) => {
+    return async (dispatch) => {
         dispatch({ type: "FETCH_REPOS" });
         // const headers = {
         //     "Authorization": `token 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`
@@ -24,9 +24,8 @@ export const fetchRepos = () => {
             const response = await axios.get("https://api.github.com/users/TimotijevicVlada/repos");
             console.log(response.data);
             dispatch({ type: "FETCH_REPOS_SUCCESS", payload: response.data });
-        } catch (err) {
-            console.log(err);
-            dispatch({ type: "FETCH_REPOS_FAILURE" });
+        } catch (error) {
+            dispatch({ type: "FETCH_REPOS_FAILURE", error });
         }
     }
 }

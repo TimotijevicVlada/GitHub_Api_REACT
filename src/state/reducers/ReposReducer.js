@@ -1,28 +1,28 @@
 const INITIAL_STATE = {
     repos: [],
-    isFetching: false,
-    error: false,
+    isLoading: false,
+    error: null,
 };
 
 const ReposReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
             case "FETCH_REPOS":
                 return {
-                    repos: [],
-                    isFetching: true,
-                    error: false
+                    ...state,
+                    isLoading: true,
+                    error: null
                 };
             case "FETCH_REPOS_SUCCESS":
                 return {
+                    ...state,
                     repos: action.payload,
-                    isFetching: false,
-                    error: false
+                    isLoading: false,
                 };
             case "FETCH_REPOS_FAILURE":
                 return {
-                    repos: [],
-                    isFetching: false,
-                    error: true
+                    ...state,
+                    isLoading: false,
+                    error: action.error
                 };
         default:
             return state;

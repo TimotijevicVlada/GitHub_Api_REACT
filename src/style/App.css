@@ -56,32 +56,31 @@
           justify-content: center;
 }
 
-.App .home .user {
+.App .home .user .user_wrapper {
   border: 2px solid #575757;
   width: 400px;
-  height: 90vh;
   padding: 20px;
   border-radius: 10px;
 }
 
-.App .home .user img {
+.App .home .user .user_wrapper img {
   width: 100%;
   border-radius: 50%;
 }
 
-.App .home .user .name {
+.App .home .user .user_wrapper .name {
   margin-top: 20px;
 }
 
-.App .home .user .bio {
+.App .home .user .user_wrapper .bio {
   margin: 20px 0px;
 }
 
-.App .home .user .follow i {
+.App .home .user .user_wrapper .follow i {
   margin-right: 10px;
 }
 
-.App .home .user .location i {
+.App .home .user .user_wrapper .location i {
   margin-right: 10px;
 }
 

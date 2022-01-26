@@ -15,7 +15,7 @@ export const FetchFailure = () => ({
 
 export const fetchUser = () => {
 
-    return async (dispatch, getState) => {
+    return async (dispatch) => {
         dispatch({ type: "FETCH_USER" });
         // const headers = {
         //     "Authorization": `token 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`
@@ -24,9 +24,8 @@ export const fetchUser = () => {
             const response = await axios.get("https://api.github.com/users/TimotijevicVlada");
             console.log(response.data);
             dispatch({ type: "FETCH_USER_SUCCESS", payload: response.data });
-        } catch (err) {
-            console.log(err);
-            dispatch({ type: "FETCH_USER_FAILURE" });
+        } catch (error) {
+            dispatch({ type: "FETCH_USER_FAILURE", error });
         }
     }
 }

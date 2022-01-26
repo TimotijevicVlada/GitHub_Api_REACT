@@ -1,28 +1,28 @@
 const INITIAL_STATE = {
     user: [],
-    isFetching: false,
-    error: false,
+    isLoading: false,
+    error: null,
 };
 
 const UserReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case "FETCH_USER":
             return {
-                user: [],
-                isFetching: true,
-                error: false,
+                ...state,
+                isLoading: true,
+                error: null,
             };
         case "FETCH_USER_SUCCESS":
             return {
+                ...state,
                 user: action.payload,
-                isFetching: false,
-                error: false,
+                isLoading: false,
             };
         case "FETCH_USER_FAILURE":
             return {
-                user: [],
-                isFetching: false,  
-                error: true,
+                ...state,
+                isLoading: false,
+                error: action.error,
             };
         default:
             return state;

@@ -39,47 +39,48 @@
     display: flex;
     justify-content: center;
     .user {
-      border: 2px solid rgb(87, 87, 87);
-      width: 400px;
-      height: 90vh;
-      padding: 20px;
-      border-radius: 10px;
-      img {
-        width: 100%;
-        border-radius: 50%;
-      }
-      .name {
-        margin-top: 20px;
-      }
-      .bio {
-        margin: 20px 0px;
-      }
-      .follow {
-        i {
-          margin-right: 10px;
+      .user_wrapper {
+        border: 2px solid rgb(87, 87, 87);
+        width: 400px;
+        padding: 20px;
+        border-radius: 10px;
+        img {
+          width: 100%;
+          border-radius: 50%;
         }
-      }
-      .location {
-        i {
-          margin-right: 10px;
+        .name {
+          margin-top: 20px;
+        }
+        .bio {
+          margin: 20px 0px;
+        }
+        .follow {
+          i {
+            margin-right: 10px;
+          }
+        }
+        .location {
+          i {
+            margin-right: 10px;
+          }
         }
       }
     }
     .repos {
-        margin-left: 100px;
-        .repo {
-            display: flex;
-            align-items: center;
-            border: 2px solid rgb(87, 87, 87);
-            margin-bottom: 10px;
-            width: 800px;
-            border-radius: 7px;
-            padding: 5px 20px;
-            cursor: pointer;
-            .index {
-                margin-right: 30px;
-            }
+      margin-left: 100px;
+      .repo {
+        display: flex;
+        align-items: center;
+        border: 2px solid rgb(87, 87, 87);
+        margin-bottom: 10px;
+        width: 800px;
+        border-radius: 7px;
+        padding: 5px 20px;
+        cursor: pointer;
+        .index {
+          margin-right: 30px;
         }
+      }
     }
   }
 }
