@@ -23,7 +23,7 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   background-color: #292929;
-  padding: 8px 0px;
+  height: 7vh;
 }
 
 .App .navbar .logo {
@@ -54,6 +54,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  min-height: 86vh;
 }
 
 .App .home .user .user_wrapper {
@@ -105,5 +106,23 @@
 
 .App .home .repos .repo .index {
   margin-right: 30px;
+}
+
+.App .search {
+  min-height: 86vh;
+}
+
+.App .footer {
+  height: 7vh;
+  background-color: #292929;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=App.css.map */

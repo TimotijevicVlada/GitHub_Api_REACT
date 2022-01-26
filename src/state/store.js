@@ -10,4 +10,3 @@ const root = combineReducers({
 })
 
 export const store = createStore(root, composeWithDevTools(applyMiddleware(thunk)));
-

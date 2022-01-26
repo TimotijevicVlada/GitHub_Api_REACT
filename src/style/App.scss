@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: space-evenly;
     background-color: rgb(41, 41, 41);
-    padding: 8px 0px;
+    height: 7vh;
     .logo {
       font-size: 22px;
       i {
@@ -38,6 +38,7 @@
     padding: 50px 100px;
     display: flex;
     justify-content: center;
+    min-height: 86vh;
     .user {
       .user_wrapper {
         border: 2px solid rgb(87, 87, 87);
@@ -82,5 +83,15 @@
         }
       }
     }
+  }
+  .search {
+    min-height: 86vh;
+  }
+  .footer {
+    height: 7vh;
+    background-color: rgb(41, 41, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
