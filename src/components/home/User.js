@@ -1,33 +1,15 @@
-import { useContext, useEffect } from 'react';
-import { UserContext } from '../../context/Context';
-import axios from 'axios';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchUser } from "../../state/actions/UserActions";
 
 const User = () => {
 
-    const { dispatch, user } = useContext(UserContext);
-
-    console.log(user);
-
-    const getUser = async () => {
-        dispatch({ type: "FETCH_USER" });
-
-        // const headers = {
-        //     "Authorization": `token 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`
-        // }
-        try {
-            const response = await axios.get("https://api.github.com/users/TimotijevicVlada");
-            console.log(response.data);
-
-            dispatch({ type: "FETCH_USER_SUCCESS", payload: response.data });
-        } catch (err) {
-            console.log(err);
-            dispatch({ type: "FETCH_USER_FAILURE" });
-        }
-    };
+    const dispatch = useDispatch();
+    const user = useSelector(state => state.user.user);
 
     useEffect(() => {
-        getUser();
-    }, [])
+        dispatch(fetchUser());
+    }, []) 
 
     return (
         <div className='user'>
