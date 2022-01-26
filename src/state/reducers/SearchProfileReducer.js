@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-    user: [],
+    user: JSON.parse(localStorage.getItem("github_profile")) || {},  
     isLoading: false,
     error: null,
 };

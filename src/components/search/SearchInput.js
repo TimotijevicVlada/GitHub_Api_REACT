@@ -14,17 +14,16 @@ const SearchInput = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(fetchUserProfile(inputValue.value));
+        dispatch({ type: "UPDATE_INPUT_VALUE", payload: "" });
     }
 
     return (
         <div className='search_input'>
             <form onSubmit={handleSubmit}>
-                <input onChange={(e) => handleChange(e)} type="text" placeholder='Search profile...' />
+                <input onChange={(e) => handleChange(e)} value={inputValue.value} type="text" placeholder='Search profile...' />
                 <button type='submit'>Search</button>
             </form>
         </div>
-
-
     )
 };
 
