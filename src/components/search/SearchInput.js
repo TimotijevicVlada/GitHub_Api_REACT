@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUserProfile } from "../../state/actions/SearchProfileAction";
+import { fetchProfileRepos } from '../../state/actions/SearchReposActions';
 
 const SearchInput = () => {
 
@@ -14,6 +15,7 @@ const SearchInput = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(fetchUserProfile(inputValue.value));
+        dispatch(fetchProfileRepos(inputValue.value));
         dispatch({ type: "UPDATE_INPUT_VALUE", payload: "" });
     }
 

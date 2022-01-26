@@ -5,11 +5,12 @@ const SearchProfile = () => {
 
     const profile = useSelector(state => state.searchProfile);
     const profileInfo = profile.user;
-    console.log(profileInfo);
+    const repos = useSelector(state => state.searchRepos);
+    const reposInfo = repos.repos;
 
     useEffect(() => {
-        localStorage.setItem("github_profile", JSON.stringify(profileInfo));
-    }, [profileInfo])
+        localStorage.setItem("github_profile", JSON.stringify({ profile: profileInfo, repos: reposInfo }));
+    }, [profileInfo, reposInfo])
 
     return (
         <div className='search_profile'>

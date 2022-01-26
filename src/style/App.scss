@@ -111,12 +111,16 @@
           padding: 5px 10px;
           background-color: rgb(129, 129, 129);
           color: rgb(26, 26, 26);
+          &:hover {
+            background-color: rgb(158, 158, 158);
+          }
         }
       }
     }
     .search_profile {
       display: flex;
       justify-content: center;
+      min-height: 50vh;
       .profile_wrapper {
         border: 2px solid rgb(87, 87, 87);
         border-radius: 10px;
@@ -139,6 +143,9 @@
             border-bottom: 1px solid gray;
             span {
               width: 50%;
+              &:first-child {
+                color: rgb(100, 100, 100);
+              }
               &:last-child {
                 font-size: 18px;
                 text-align: right;
@@ -154,6 +161,61 @@
       .no_profile {
         font-weight: 200;
         margin-top: 100px;
+      }
+    }
+    .profile_repos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .repos_title {
+        text-align: center;
+        font-weight: 200;
+        padding: 20px 0px;
+      }
+      .profile_repos_item {
+        width: 1000px;
+        border: 2px solid rgb(87, 87, 87);
+        border-radius: 7px;
+        padding: 5px 20px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+          background-color: rgb(37, 37, 37);
+        }
+        .repos_index {
+          margin-right: 30px;
+        }
+        .repo_info {
+          .repo_name {
+            font-size: 18px;
+            margin-bottom: 7px;
+            span {
+              &:first-child {
+                margin-right: 30px;
+                color: 	#0096FF;
+              }
+              &:last-child {
+                font-size: 12px;
+                background-color: rgb(87, 87, 87);
+                //border: 2px solid rgb(87, 87, 87);
+                padding: 0px 10px;
+                border-radius: 20px;
+              }
+            }
+          }
+          .repo_lang {
+            span {
+              &:first-child {
+                margin-right: 30px;
+              }
+              .updated {
+                color: orange;
+              }
+            }
+          }
+        }
       }
     }
   }
