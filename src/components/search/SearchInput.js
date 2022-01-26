@@ -1,0 +1,31 @@
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchUserProfile } from "../../state/actions/SearchProfileAction";
+
+const SearchInput = () => {
+
+    const dispatch = useDispatch();
+    const inputValue = useSelector(state => state.search);
+
+    const handleChange = (e) => {
+        dispatch({ type: "UPDATE_INPUT_VALUE", payload: e.target.value });
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch(fetchUserProfile(inputValue.value));
+    }
+
+    return (
+        <div className='search_input'>
+            <form onSubmit={handleSubmit}>
+                <input onChange={(e) => handleChange(e)} type="text" placeholder='Search profile...' />
+                <button type='submit'>Search</button>
+            </form>
+        </div>
+
+
+    )
+};
+
+export default SearchInput;

@@ -86,6 +86,34 @@
   }
   .search {
     min-height: 86vh;
+    .search_input {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      form {
+        input {
+          font-size: 17px;
+          padding: 5px 10px;
+          border: none;
+          background-color: rgb(77, 77, 77);
+          color: white;
+          border-radius: 5px;
+          &:focus {
+            outline: none;
+          }
+        }
+        button {
+          cursor: pointer;
+          margin-left: 10px;
+          border: none;
+          border-radius: 5px;
+          font-size: 17px;
+          padding: 5px 10px;
+          background-color: rgb(129, 129, 129);
+          color: rgb(26, 26, 26);
+        }
+      }
+    }
   }
   .footer {
     height: 7vh;

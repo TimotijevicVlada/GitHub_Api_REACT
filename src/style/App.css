@@ -112,6 +112,40 @@
   min-height: 86vh;
 }
 
+.App .search .search_input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+.App .search .search_input form input {
+  font-size: 17px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #4d4d4d;
+  color: white;
+  border-radius: 5px;
+}
+
+.App .search .search_input form input:focus {
+  outline: none;
+}
+
+.App .search .search_input form button {
+  cursor: pointer;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+  padding: 5px 10px;
+  background-color: #818181;
+  color: #1a1a1a;
+}
+
 .App .footer {
   height: 7vh;
   background-color: #292929;
