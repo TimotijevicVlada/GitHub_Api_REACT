@@ -17,14 +17,12 @@ export const FetchFailure = () => ({
 export const fetchUser = () => {
     return async (dispatch) => {
         dispatch({ type: "FETCH_USER" });
-        const headers = {
-            "Authorization": `Token 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`
-        }
+        // const headers = {
+        //     "Authorization": `Token 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`
+        // }
         const url = "https://api.github.com/users/TimotijevicVlada";
         try {
-            const response = await axios.get(url, {
-                "headers": headers
-            });
+            const response = await axios.get(url);
             console.log(response);
             dispatch({ type: "FETCH_USER_SUCCESS", payload: response.data });
 
