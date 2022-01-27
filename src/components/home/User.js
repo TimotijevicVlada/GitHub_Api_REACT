@@ -8,7 +8,7 @@ const User = () => {
     const user = useSelector(state => state.user);
     const userInfo = user.user;
 
-     //Run fetchUser function to get the data 
+    //Run fetchUser function to get the data 
     useEffect(() => {
         dispatch(fetchUser());
     }, [])
