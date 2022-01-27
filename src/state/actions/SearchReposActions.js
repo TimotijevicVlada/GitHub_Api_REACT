@@ -21,7 +21,10 @@ export const fetchProfileRepos = (value) => {
         try {
             const response = await axios.get(`https://api.github.com/users/${value}/repos`);
             console.log(response.data);
-            dispatch({ type: "FETCH_PROFILE_REPOS_SUCCESS", payload: response.data });
+            dispatch({
+                type: "FETCH_PROFILE_REPOS_SUCCESS",
+                payload: response.data
+            });
         } catch (error) {
             //dispatch({ type: "FETCH_REPOS_FAILURE", error });
         }

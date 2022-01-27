@@ -14,6 +14,7 @@ const SearchProfile = () => {
 
     return (
         <div className='search_profile'>
+            {profileInfo.name && <h2 className='search_profile_title'>Profile</h2>}
             {profileInfo.name ?
                 <div className='profile_wrapper'>
                     <div className='img_wrapper'>
@@ -34,7 +35,7 @@ const SearchProfile = () => {
                         </div>
                         <div className='profile_element'>
                             <span>GitHub link</span>
-                            <a href={profileInfo.html_url} target="_blank">GITHUB</a>
+                            <a href={profileInfo.html_url} target="_blank" rel="noreferrer">GITHUB</a>
                         </div>
                         <div className='profile_element'>
                             <span>Location</span>
