@@ -47,7 +47,7 @@
 }
 
 .App .home {
-  padding: 50px 100px;
+  padding: 20px 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,6 +55,16 @@
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 86vh;
+}
+
+.App .home .user {
+  margin-right: 100px;
+}
+
+.App .home .user .user_title {
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: 200;
 }
 
 .App .home .user .user_wrapper {
@@ -85,27 +95,86 @@
   margin-right: 10px;
 }
 
-.App .home .repos {
-  margin-left: 100px;
+.App .home .repos .repos_title {
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: 200;
 }
 
-.App .home .repos .repo {
+.App .home .repos .repos_title .repos_num {
+  background-color: gray;
+  border-radius: 100px;
+  padding: 0px 7px;
+  font-size: 17px;
+}
+
+.App .home .repos .repos_item {
+  width: 600px;
+  border: 2px solid #575757;
+  border-radius: 7px;
+  padding: 5px 20px;
+  margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 2px solid #575757;
-  margin-bottom: 10px;
-  width: 800px;
-  border-radius: 7px;
-  padding: 5px 20px;
+  color: inherit;
+  text-decoration: none;
   cursor: pointer;
 }
 
-.App .home .repos .repo .index {
+.App .home .repos .repos_item:hover {
+  background-color: #252525;
+}
+
+.App .home .repos .repos_item .repos_index {
   margin-right: 30px;
+  width: 3%;
+}
+
+.App .home .repos .repos_item .repo_info {
+  width: 97%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .home .repos .repos_item .repo_info .repo_info_main .repo_name {
+  font-size: 18px;
+  margin-bottom: 7px;
+}
+
+.App .home .repos .repos_item .repo_info .repo_info_main .repo_name span:first-child {
+  margin-right: 30px;
+  color: #0096ff;
+}
+
+.App .home .repos .repos_item .repo_info .repo_info_main .repo_name span:last-child {
+  font-size: 12px;
+  background-color: #575757;
+  padding: 0px 10px;
+  border-radius: 20px;
+}
+
+.App .home .repos .repos_item .repo_info .repo_info_main .repo_lang span:first-child {
+  margin-right: 30px;
+}
+
+.App .home .repos .repos_item .repo_info .repo_info_main .repo_lang span .updated {
+  color: orange;
+}
+
+.App .home .repos .repos_item .repo_info .owner img {
+  width: 40px;
+  border-radius: 50%;
 }
 
 .App .search {
@@ -186,9 +255,9 @@
   width: 50%;
 }
 
-.App .search .search_profile .profile_wrapper .img_wrapper img {
-  border-radius: 50%;
+.App .search .search_profile .profile_wrapper .img_wrapper a img {
   width: 400px;
+  border-radius: 50%;
 }
 
 .App .search .search_profile .profile_wrapper .profile_info {

@@ -18,7 +18,9 @@ const SearchProfile = () => {
             {profileInfo.name ?
                 <div className='profile_wrapper'>
                     <div className='img_wrapper'>
-                        <img src={profileInfo.avatar_url} alt={profileInfo.name} />
+                        <a href={profileInfo.html_url} target="_blank" rel="noreferrer">
+                            <img src={profileInfo.avatar_url} alt={profileInfo.name} />
+                        </a>
                     </div>
                     <div className='profile_info'>
                         <div className='profile_element'>
