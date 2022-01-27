@@ -8,10 +8,12 @@ const SearchInput = () => {
     const dispatch = useDispatch();
     const inputValue = useSelector(state => state.search);
 
+    //Function that set input state 
     const handleChange = (e) => {
         dispatch({ type: "UPDATE_INPUT_VALUE", payload: e.target.value });
     }
 
+    //Function that fetch profile and repos if we have input value 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!inputValue.value) {

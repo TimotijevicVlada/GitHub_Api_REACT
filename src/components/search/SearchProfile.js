@@ -25,8 +25,8 @@ const SearchProfile = () => {
 
     return (
         <div className='search_profile'>
-            {profileInfo.name && <h2 className='search_profile_title'>Profile</h2>}
-            {profileInfo.name ?
+            {!profile.isLoading && profileInfo.name && <h2 className='search_profile_title'>Profile</h2>}
+            {profile.isLoading ? <div className='loading'>Loading...</div> : profileInfo.name ?
                 <div className='profile_wrapper'>
                     <div className='img_wrapper'>
                         <a href={profileInfo.html_url} target="_blank" rel="noreferrer">

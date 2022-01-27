@@ -8,13 +8,14 @@ const User = () => {
     const user = useSelector(state => state.user);
     const userInfo = user.user;
 
+     //Run fetchUser function to get the data 
     useEffect(() => {
         dispatch(fetchUser());
     }, [])
 
     return (
         <div className='user'>
-            {userInfo.name && <h2 className='user_title'>Profile</h2>}
+            {!user.isLoading && <h2 className='user_title'>Profile</h2>}
             {user.isLoading ? <h2 className='user_loading'>Loading profile...</h2> :
                 <div className='user_wrapper'>
                     <a href={userInfo.html_url} target="_blank" rel="noreferrer">

@@ -8,13 +8,14 @@ const Repositories = () => {
     const repos = useSelector(state => state.repos);
     const reposInfo = repos.repos.sort((a, b) => a.updated_at < b.updated_at ? 1 : -1);
 
+    //Run fetchRepos function to get the data 
     useEffect(() => {
         dispatch(fetchRepos());
     }, [])
 
     return (
         <div className='repos'>
-            {reposInfo.length > 0 && <h2 className='repos_title'>Repositories <span className='repos_num'>{reposInfo.length}</span></h2>}
+            {!repos.isLoading && <h2 className='repos_title'>Repositories <span className='repos_num'>{reposInfo.length}</span></h2>}
             {repos.isLoading ? <h2 className='repos_loading'>Loading repos...</h2> :
                 reposInfo.map((item, index) => (
                     <a href={item.html_url} target="_blank" rel="noreferrer" className='repos_item' key={item.id}>

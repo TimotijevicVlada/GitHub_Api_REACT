@@ -5,12 +5,12 @@ const SearchProfileRepos = () => {
 
     const repos = useSelector(state => state.searchRepos);
     const reposInfo = repos.repos.sort((a, b) => a.updated_at < b.updated_at ? 1 : -1);
-    console.log(reposInfo);
+
 
     return (
         <div className='profile_repos'>
-            {reposInfo.length > 0 && <h2 className='repos_title'>Repositories <span className='repos_num'>{reposInfo.length}</span></h2>}
-            {reposInfo.map((item, index) => (
+            {!repos.isLoading && reposInfo.length > 0 && <h2 className='repos_title'>Repositories <span className='repos_num'>{reposInfo.length}</span></h2>}
+            {!repos.isLoading && reposInfo.map((item, index) => (
                 <a href={item.html_url} target="_blank" rel="noreferrer" className='profile_repos_item' key={item.id}>
                     <div className='repos_index'>#{index + 1}</div>
                     <div className='repo_info'>

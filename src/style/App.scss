@@ -151,6 +151,12 @@
       }
     }
   }
+  .loading_mode {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 86vh;
+  }
   .search {
     min-height: 86vh;
     .search_input {

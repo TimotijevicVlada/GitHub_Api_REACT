@@ -13,8 +13,8 @@ export const FetchFailure = () => ({
     type: "FETCH_USER_FAILURE"
 })
 
+//Function that get the user data and set to the state
 export const fetchUser = () => {
-
     return async (dispatch) => {
         dispatch({ type: "FETCH_USER" });
         // const headers = {
@@ -24,6 +24,7 @@ export const fetchUser = () => {
             const response = await axios.get("https://api.github.com/users/TimotijevicVlada");
             console.log(response.data);
             dispatch({ type: "FETCH_USER_SUCCESS", payload: response.data });
+
         } catch (error) {
             dispatch({ type: "FETCH_USER_FAILURE", error });
         }

@@ -178,6 +178,19 @@
   border-radius: 50%;
 }
 
+.App .loading_mode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 86vh;
+}
+
 .App .search {
   min-height: 86vh;
 }
