@@ -1,16 +1,27 @@
 import { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 const SearchProfile = () => {
 
+    const dispatch = useDispatch();
     const profile = useSelector(state => state.searchProfile);
     const profileInfo = profile.user;
     const repos = useSelector(state => state.searchRepos);
     const reposInfo = repos.repos;
 
+    //Save profile and repos to the state
     useEffect(() => {
-        localStorage.setItem("github_profile", JSON.stringify({ profile: profileInfo, repos: reposInfo }));
-    }, [profileInfo, reposInfo])
+        const storage = JSON.parse(localStorage.getItem("github_profile"));
+        if (storage) {
+            dispatch({ type: "FETCH_SEARCH_USER_SUCCESS", payload: storage.profile });
+            dispatch({ type: "FETCH_PROFILE_REPOS_SUCCESS", payload: storage.repos });
+        }
+    }, [dispatch])
+
+    //Save profile and repos to the localStorage
+    useEffect(() => {
+        localStorage.setItem("github_profile", JSON.stringify({ profile: profileInfo, repos: reposInfo }))
+    })
 
     return (
         <div className='search_profile'>

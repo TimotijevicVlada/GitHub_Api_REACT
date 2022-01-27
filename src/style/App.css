@@ -74,9 +74,10 @@
   border-radius: 10px;
 }
 
-.App .home .user .user_wrapper img {
+.App .home .user .user_wrapper a img {
   width: 100%;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .App .home .user .user_wrapper .name {
@@ -219,6 +220,10 @@
   background-color: #9e9e9e;
 }
 
+.App .search .search_input form .error {
+  color: crimson;
+}
+
 .App .search .search_profile {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -234,6 +239,10 @@
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 50vh;
+}
+
+.App .search .search_profile .loading {
+  font-size: 25px;
 }
 
 .App .search .search_profile .search_profile_title {

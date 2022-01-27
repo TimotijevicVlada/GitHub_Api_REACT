@@ -3,4 +3,8 @@ export const onChange = (value) => ({
     payload: value
 })
 
+export const onChangeError = () => ({
+    type: "UPDATE_INPUT_ERROR"
+})
+
 

@@ -14,9 +14,13 @@ const SearchInput = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(fetchUserProfile(inputValue.value));
-        dispatch(fetchProfileRepos(inputValue.value));
-        dispatch({ type: "UPDATE_INPUT_VALUE", payload: "" });
+        if (!inputValue.value) {
+            dispatch({ type: "UPDATE_INPUT_ERROR" });
+        } else {
+            dispatch(fetchUserProfile(inputValue.value));
+            dispatch(fetchProfileRepos(inputValue.value));
+            dispatch({ type: "UPDATE_INPUT_VALUE", payload: "" });
+        }
     }
 
     return (
@@ -24,6 +28,7 @@ const SearchInput = () => {
             <form onSubmit={handleSubmit}>
                 <input onChange={(e) => handleChange(e)} value={inputValue.value} type="text" placeholder='Search profile...' />
                 <button type='submit'>Search</button>
+                {inputValue.error && <div className='error'>Error: your field is empty!</div>}
             </form>
         </div>
     )

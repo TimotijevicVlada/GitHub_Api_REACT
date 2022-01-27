@@ -17,7 +17,9 @@ const User = () => {
             {userInfo.name && <h2 className='user_title'>Profile</h2>}
             {user.isLoading ? <h2 className='user_loading'>Loading profile...</h2> :
                 <div className='user_wrapper'>
-                    <img src={userInfo.avatar_url} alt={userInfo.name} />
+                    <a href={userInfo.html_url} target="_blank" rel="noreferrer">
+                        <img src={userInfo.avatar_url} alt={userInfo.name} />
+                    </a>
                     <h2 className='name'>{userInfo.name}</h2>
                     <div className='username'>{userInfo.login}</div>
                     <div className='bio'>{userInfo.bio}</div>

@@ -51,10 +51,14 @@
         width: 400px;
         padding: 20px;
         border-radius: 10px;
-        img {
-          width: 100%;
-          border-radius: 50%;
+        a {
+          img {
+            width: 100%;
+            border-radius: 50%;
+            cursor: pointer;
+          }
         }
+
         .name {
           margin-top: 20px;
         }
@@ -178,6 +182,9 @@
             background-color: rgb(158, 158, 158);
           }
         }
+        .error {
+          color: crimson;
+        }
       }
     }
     .search_profile {
@@ -186,6 +193,9 @@
       align-items: center;
       justify-content: center;
       min-height: 50vh;
+      .loading {
+        font-size: 25px;
+      }
       .search_profile_title {
         font-weight: 200;
         padding-bottom: 20px;

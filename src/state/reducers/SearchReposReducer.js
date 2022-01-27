@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-    repos: JSON.parse(localStorage.getItem("github_profile")).repos || [],
+    repos: [],
     isLoading: false,
     error: null,
 };
