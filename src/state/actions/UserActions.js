@@ -17,12 +17,15 @@ export const FetchFailure = () => ({
 export const fetchUser = () => {
     return async (dispatch) => {
         dispatch({ type: "FETCH_USER" });
-        // const headers = {
-        //     "Authorization": `token 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`
-        // }
+        const headers = {
+            "Authorization": `Token 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`
+        }
+        const url = "https://api.github.com/users/TimotijevicVlada";
         try {
-            const response = await axios.get("https://api.github.com/users/TimotijevicVlada");
-            console.log(response.data);
+            const response = await axios.get(url, {
+                "headers": headers
+            });
+            console.log(response);
             dispatch({ type: "FETCH_USER_SUCCESS", payload: response.data });
 
         } catch (error) {
