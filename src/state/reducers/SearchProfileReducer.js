@@ -1,7 +1,7 @@
 const INITIAL_STATE = {
     user: {},  
     isLoading: false,
-    error: null,
+    error: false,
 };
 
 const SearchProfileReducer = (state = INITIAL_STATE, action) => {
@@ -10,7 +10,7 @@ const SearchProfileReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 isLoading: true,
-                error: null,
+                error: false,
             };
         case "FETCH_SEARCH_USER_SUCCESS":
             return {
@@ -22,7 +22,7 @@ const SearchProfileReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 isLoading: false,
-                error: action.error,
+                error: true
             };
         default:
             return state;

@@ -13,6 +13,7 @@ const Repositories = () => {
         dispatch(fetchRepos());
     }, [])
 
+
     return (
         <div className='repos'>
             {!repos.isLoading && <h2 className='repos_title'>Repositories <span className='repos_num'>{reposInfo.length}</span></h2>}

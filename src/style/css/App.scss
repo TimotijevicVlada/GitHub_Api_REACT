@@ -46,6 +46,10 @@
         padding-bottom: 20px;
         font-weight: 200;
       }
+      .error {
+        font-weight: 200;
+        color: brown;
+      }
       .user_wrapper {
         border: 2px solid rgb(87, 87, 87);
         width: 400px;
@@ -88,6 +92,10 @@
           padding: 0px 7px;
           font-size: 17px;
         }
+      }
+      .error {
+        font-weight: 200;
+        color: brown;
       }
       .repos_item {
         width: 600px;

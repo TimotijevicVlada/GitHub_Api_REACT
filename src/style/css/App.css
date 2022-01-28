@@ -67,6 +67,11 @@
   font-weight: 200;
 }
 
+.App .home .user .error {
+  font-weight: 200;
+  color: brown;
+}
+
 .App .home .user .user_wrapper {
   border: 2px solid #575757;
   width: 400px;
@@ -107,6 +112,11 @@
   border-radius: 100px;
   padding: 0px 7px;
   font-size: 17px;
+}
+
+.App .home .repos .error {
+  font-weight: 200;
+  color: brown;
 }
 
 .App .home .repos .repos_item {

@@ -18,7 +18,7 @@ export const fetchUser = () => {
     return async (dispatch) => {
         dispatch({ type: "FETCH_USER" });
         // const headers = {
-        //     "Authorization": `Token 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`
+        //     "Authorization": `token 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`
         // }
         const url = "https://api.github.com/users/TimotijevicVlada";
         try {
@@ -27,7 +27,8 @@ export const fetchUser = () => {
             dispatch({ type: "FETCH_USER_SUCCESS", payload: response.data });
 
         } catch (error) {
-            dispatch({ type: "FETCH_USER_FAILURE", error });
+            console.log(error);
+            dispatch({ type: "FETCH_USER_FAILURE" });
         }
     }
 }
