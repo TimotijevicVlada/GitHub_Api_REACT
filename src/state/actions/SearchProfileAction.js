@@ -19,9 +19,7 @@ export const fetchUserProfile = (value) => {
         dispatch({ type: "FETCH_SEARCH_USER" });
         try {
             const response = await axios.get(`https://api.github.com/users/${value}`);
-            console.log(response.data);
             dispatch({ type: "FETCH_SEARCH_USER_SUCCESS", payload: response.data });
-
         } catch (error) {
             console.log(error);
             dispatch({ type: "FETCH_SEARCH_USER_FAILURE", error });

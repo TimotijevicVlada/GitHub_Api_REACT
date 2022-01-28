@@ -17,10 +17,8 @@ export const FetchProfileReposFailure = () => ({
 export const fetchProfileRepos = (value) => {
     return async (dispatch) => {
         dispatch({ type: "FETCH_PROFILE_REPOS" });
-
         try {
             const response = await axios.get(`https://api.github.com/users/${value}/repos?per_page=40`);
-            console.log(response.data);
             dispatch({
                 type: "FETCH_PROFILE_REPOS_SUCCESS",
                 payload: response.data

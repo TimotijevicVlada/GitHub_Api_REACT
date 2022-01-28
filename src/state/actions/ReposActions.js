@@ -17,15 +17,14 @@ export const FetchReposFailure = () => ({
 export const fetchRepos = () => {
     return async (dispatch) => {
         dispatch({ type: "FETCH_REPOS" });
+        //For some reason, my TOKEN return error when I insert it in the header of request down bellow. I will try to find solution for this.
         // const headers = {
-        //     "Authorization": `Token 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`
+        //     "Authorization": `token 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`
         // }
         const url = "https://api.github.com/users/TimotijevicVlada/repos?per_page=40";
         try {
             const response = await axios.get(url);
-            console.log(response);
             dispatch({ type: "FETCH_REPOS_SUCCESS", payload: response.data });
-
         } catch (error) {
             console.log(error);
             dispatch({ type: "FETCH_REPOS_FAILURE" });
