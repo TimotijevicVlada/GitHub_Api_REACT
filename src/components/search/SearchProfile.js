@@ -11,7 +11,7 @@ const SearchProfile = () => {
 
     //Save profile and repos to the state
     useEffect(() => {
-        const storage = JSON.parse(localStorage.getItem("github_profile"));
+        const storage = JSON.parse(sessionStorage.getItem("github_profile"));
         if (storage) {
             dispatch({ type: "FETCH_SEARCH_USER_SUCCESS", payload: storage.profile });
             dispatch({ type: "FETCH_PROFILE_REPOS_SUCCESS", payload: storage.repos });
@@ -20,7 +20,7 @@ const SearchProfile = () => {
 
     //Save profile and repos to the localStorage
     useEffect(() => {
-        localStorage.setItem("github_profile", JSON.stringify({ profile: profileInfo, repos: reposInfo }))
+        sessionStorage.setItem("github_profile", JSON.stringify({ profile: profileInfo, repos: reposInfo }))
     })
 
     return (

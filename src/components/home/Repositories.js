@@ -11,8 +11,7 @@ const Repositories = () => {
     //Run fetchRepos function to get the data 
     useEffect(() => {
         dispatch(fetchRepos());
-    }, [])
-
+    }, [dispatch])
 
     return (
         <div className='repos'>

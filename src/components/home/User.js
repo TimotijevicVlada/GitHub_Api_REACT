@@ -11,7 +11,7 @@ const User = () => {
     //Run fetchUser function to get the data 
     useEffect(() => {
         dispatch(fetchUser());
-    }, [])
+    }, [dispatch])
 
     return (
         <div className='user'>
